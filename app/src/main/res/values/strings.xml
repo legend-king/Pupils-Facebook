@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pupils Facebook</string>
+    <string name="home">Home</string>
+    <string name="addPost">Add post</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="magnifier">Magnifier</string>
+    <string name="search">Search</string>
+</resources>
