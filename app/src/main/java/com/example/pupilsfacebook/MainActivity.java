@@ -1,11 +1,15 @@
 package com.example.pupilsfacebook;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.widget.Adapter;
 import android.widget.Toast;
 
+import com.example.pupilsfacebook.Adapters.ViewPagerAdapter;
 import com.example.pupilsfacebook.Fragments.AddFragment;
 import com.example.pupilsfacebook.Fragments.HomeFragment;
 import com.example.pupilsfacebook.Fragments.NotificationFragment;
@@ -24,34 +28,32 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, new HomeFragment());
-        transaction.commit();
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(),
+                FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        binding.viewPager.setAdapter(adapter);
+
+        binding.viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                    binding.readableBottomBar.selectItem(position);
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         binding.readableBottomBar.setOnItemSelectListener(new ReadableBottomBar.ItemSelectListener() {
             @Override
             public void onItemSelected(int i) {
-
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-                switch(i){
-                    case 0:
-                        transaction.replace(R.id.container, new HomeFragment());
-                        break;
-                    case 1:
-                        transaction.replace(R.id.container, new NotificationFragment());
-                        break;
-                    case 2:
-                        transaction.replace(R.id.container, new AddFragment());
-                        break;
-                    case 3:
-                        transaction.replace(R.id.container, new SearchFragment());
-                        break;
-                    case 4:
-                        transaction.replace(R.id.container, new ProfileFragment());
-                        break;
-                }
-                transaction.commit();
+                binding.viewPager.setCurrentItem(i);
             }
         });
     }
