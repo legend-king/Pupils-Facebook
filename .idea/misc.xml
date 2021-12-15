@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/drawable/input_textbg.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/drawable/orangecircle.xml" value="0.2484375" />
+        <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/activity_login.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/activity_sign_up.xml" value="0.23229166666666667" />
+        <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/activity_verification.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/fragment_add.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/fragment_home.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/fragment_notification.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/fragment_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/layout/fragment_search.xml" value="0.23229166666666667" />
+        <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/xml/orangecircle.xml" value="0.23229166666666667" />
         <entry key="..\:/AndroidStudioProjects/PupilsFacebook/app/src/main/res/xml/tabs.xml" value="0.1" />
       </map>
     </option>
